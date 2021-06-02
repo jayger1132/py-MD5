@@ -3,7 +3,7 @@ import hashlib as hb
 from pyDes import des, CBC, PAD_PKCS5 # des
 import base64
 
-path = 'D:\Gitinit\docker-compose-DB\MD5test.txt'#文檔路徑
+path = 'D:\Gitinit\py-MD5\MD5test.txt'#文檔路徑
 with open(path,'r') as f:
         data = json.load(f) #讀取資料 為dict方式
 #print(data) #全部資料

@@ -4,7 +4,7 @@ from pyDes import des, CBC, PAD_PKCS5 # des
 import base64
 import json
 
-path = 'D:\Gitinit\docker-compose-DB\MD5test.txt'#文檔路徑
+path = 'D:\Gitinit\py-MD5\MD5test.txt'#文檔路徑
 KEY='U0724023' # key 通常是 8bytes for DES 16/24 for triple 
 
 chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789' #random範圍
