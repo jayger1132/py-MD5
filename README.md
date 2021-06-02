@@ -17,11 +17,10 @@ ad = int(MD,16)
 print (bin(ad))
 '''
 ```
-```
-### CBC = 像是chain 要加密當前明文區塊需要前一個密文區塊
-### EBC = 直接切割明文block 切完以後 明文跟密文是1v1的關係
-### mode 為 CBC時候 需要有個IV向量
-```
+
+    ### CBC = 像是chain 要加密當前明文區塊需要前一個密文區塊
+    ### EBC = 直接切割明文block 切完以後 明文跟密文是1v1的關係
+    ### mode 為 CBC時候 需要有個IV向量
 #### #(key,mode,initial value, pad , padmode)
 ```py
 iv = "".join(random.sample('0123456789',8))#list >> str 用join
