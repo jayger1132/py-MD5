@@ -27,7 +27,7 @@ print ( str,"\n\nAlpha upper",alphaup,"| Alpha lower",alphalow,"| Number" ,num,"
 
 # 訊息摘要 md5 產生 128bits 0/1 會以 32bits個hex顯示
 MD=(hb.md5(str.encode("utf-8"))).hexdigest()# 訊息摘要
-print ("訊息摘要 (md5)",MD)
+print ("訊息摘要 (md5):",MD)
 '''
 binary 的方式 =>先從 16轉成 integer 再轉bin
 ad = int(MD,16)
@@ -46,6 +46,7 @@ CBC = 像是chain 要加密當前明文區塊需要前一個密文區塊
 EBC = 直接切割明文block 切完以後 明文跟密文是1v1的關係
 mode 為 CBC時候 需要有個IV向量
 '''
+print("KEY:",KEY)
 iv = "".join(random.sample('0123456789',8))#list >> str 用join
 k = des(KEY , CBC , iv , pad=None , padmode=PAD_PKCS5)
 #加密 出來是 object的樣式

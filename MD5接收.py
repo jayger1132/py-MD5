@@ -11,15 +11,13 @@ str2 = data['str']
 DES = data['DES']
 KEY = data['KEY']
 iv = data['iv']
-#print(str2)
+print("原來的str",str2 , "\n")
 
-#改變字串
+#改變字串 AD
 AD=str2.replace('g','j',1) 
-#print(AD)
+print("更改一個字",AD)
 
 
-MD = (hb.md5(str2.encode('utf-8'))).hexdigest()
-#print(MD)
 
 # MDvsMD'比對
 AD = (hb.md5(AD.encode('utf-8'))).hexdigest()
@@ -34,6 +32,16 @@ DES = base64.b64decode(DES)
 de = k.decrypt(DES)
 de = de.decode('utf-8')
 
-print("MD ",de,"\nMD'",AD)
+print("\nMD ",de,"\nMD'",AD)
+if str(de) != str(AD):
+     print("有被竄改過\n")
 
 
+#原本的MD
+MD = (hb.md5(str2.encode('utf-8'))).hexdigest() 
+#print(MD)
+
+print("原來的str",str2)
+print("\nMD ",de,"\nMD'",MD)
+if str(de) == str(MD):
+     print("金鑰正確\n")
